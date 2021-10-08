@@ -1,7 +1,8 @@
 :root {
-	--branco: White;
-	--roxo: Thistle;
-	--verde: DarkOliveGreen;
+	--destaque: CornflowerBlue;
+	--principal: DarkSlateGray;
+	--principal-2: MintCream;
+	--destaque-2: DarkBlue;
 }
 /*--------------------------------------------------------------*/
 *{
@@ -10,8 +11,8 @@
 }
 
 body{
-	background-color: var(--verde);
-	color: var(--branco);
+	background-color: var(--principal-2);
+	color: var(--principal);
 }
 /*--------------------------------------------------------------*/
 header, footer{
@@ -29,11 +30,11 @@ header, footer{
 }
 
 .topo{	
-	border-bottom: 1px solid var(--roxo);
+	border-bottom: 1px solid var(--destaque);
 }
 
 .rodape{	
-	border-top: 1px solid var(--roxo);	
+	border-top: 1px solid var(--destaque);	
 }
 
 .item-topo{
@@ -45,17 +46,21 @@ main{
 	justify-content: center;	
 	align-items: center;	
 	
-	height: 400px;
+	min-height: 400px;
 }
 
-.principal{
-	height: 50%;	
+.principal2{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;	
+	
+	min-height: 400px;		
 }
 
-.principal h3{
+h3{
 	text-align: right;
 	
-	margin-bottom: 10px;	
+	margin: 20px 0 10px 0;	
 }
 
 .formulario{
@@ -74,9 +79,14 @@ main{
 	margin-left: 10px;	
 	width: 300px;
 	
-	background-color: var(--roxo);
-	color: var(--verde);
-	border: 1px solid var(--branco);
+	background-color: var(--principal-2);
+	color: var(--principal);
+	border: 1px solid var(--destaque);
+}
+
+textarea{
+	height: 80px;
+	resize: none;
 }
 
 .descricao-campo{
@@ -84,10 +94,42 @@ main{
 }
 
 .botao{
-	margin-top: 10px;	
-	padding: 5px;
+	margin: 10px 0 10px 0;	
+	padding: 7px;
 
-	background-color: var(--branco);
-	color: var(--verde);
+	background-color: var(--destaque);
+	color: var(--principal-2);
 	border: 0;
+}
+/*--------------------------------------------------------------*/
+table, td{
+	border: 2px solid var(--destaque);	
+}
+
+table{
+	border-collapse: collapse;
+}
+
+thead td{
+	background-color: var(--destaque);
+	color: var(--principal);
+	
+	max-width: 150px;
+}
+
+td{
+	padding: 5px;
+	
+	text-align: center;
+}
+/*--------------------------------------------------------------*/
+p{
+	margin: 10px;	
+	
+	text-align: center;
+}
+
+a{
+	color: var(--destaque-2);
+	text-decoration: none;
 }

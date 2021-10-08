@@ -20,7 +20,7 @@
 			
 				<h3>Nova mensagem</h3>
 						
-				<form action="ServletGravarMensagem" class="formulario">
+				<form action="ServletGravarMensagem" method="post" class="formulario">
 					
 					<div class="campo-formulario">
 						<label for="email" class="descricao-campo">E-mail</label>
@@ -29,7 +29,7 @@
 						
 					<div class="campo-formulario">	
 						<label for="mensagem" class="descricao-campo">Mensagem</label>						
-						<textarea name="mensagem" rows="5" class="campo"></textarea>						
+						<textarea name="mensagem" class="campo"></textarea>						
 					</div>						
 	
 					<input type="submit" value="Gravar" class="botao"/>
